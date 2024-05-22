@@ -1,0 +1,64 @@
+﻿@using PagedList.Mvc;
+
+@model PagedList.IPagedList<NTTShopAdmin.Models.Idioma>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Idiomas</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>ISO</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var idioma in Model)
+        {
+            <tr>
+                <td>@idioma.idIdioma</td>
+                <td>@idioma.descripcion</td>
+                <td>@idioma.iso</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>@Html.ActionLink("Detalles", "Detalles", "Idiomas", new { idIdioma = idioma.idIdioma }, new { @class = "btn btn-outline-secondary" })</td>
+                <td>@Html.ActionLink("Editar", "Editar", "Idiomas", new { @idIdioma = idioma.idIdioma }, new { @class = "btn btn-outline-dark" })</td>
+                @*<td>@Html.ActionLink("Eliminar", "Editar", "Idiomas", new { idIdioma = idioma.idIdioma }, new { @class = "btn btn-outline-danger" })</td>*@
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+@Html.ActionLink("Crear", "Crear", "Idiomas", null, new { @class = "btn btn-secondary" })
+
+<div style="margin:0;">
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", "Idiomas", new { page, pageSize = ViewBag.PageSize }))
+</div>
+

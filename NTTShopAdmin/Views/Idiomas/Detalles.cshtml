@@ -1,0 +1,131 @@
+﻿@model NTTShopAdmin.Models.Idioma
+@{
+    ViewBag.Title = "Detalles";
+
+    var usuariosIdioma = ViewBag.UsuariosIdioma as List<NTTShopAdmin.Models.Usuario>;
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="row">
+            <div class="col-12">
+                <h2>Detalle Idioma @Html.DisplayFor(i => i.descripcion)</h2>
+                <hr />
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-2">
+                        <p class="fw-bold">IdIdioma:</p>
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(e => e.idIdioma)
+                    </div>
+                    <div class="col-2">
+                        <p class="fw-bold">Descripción:</p>
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(e => e.descripcion)
+                    </div>
+                    <div class="col-2">
+                        <p class="fw-bold">ISO:</p>
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(e => e.iso)
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" style="margin-top:15px;">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Eliminar Idioma:</h5>
+                        <hr />
+                    </div>
+                    <div class="col-12">
+                        @if (ViewBag.Eliminar is true)
+                        {
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-6 d-grid gap-2 align-self-center">
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
+                                            Eliminar Idioma
+                                        </button>
+                                    </div>
+                                    <div class="col-6 d-grid gap-2 align-self-center" >
+                                        @Html.ActionLink("Volver a la lista de idiomas", "Index", "Idiomas", null, new { @class = "btn btn-outline-dark" })
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        else
+                        {
+                            <p class="alert alert-danger">El Idioma @Model.descripcion NO se puede eliminar ya que está en USO.</p>
+                            <div class="col-12 d-grid gap-2 align-self-center" style="margin-top:45px;">
+                                @Html.ActionLink("Volver a la lista de idiomas", "Index", "Idiomas", null, new { @class = "btn btn-outline-dark" })
+                            </div>
+                        }
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-6">
+        <div class="row">
+            <div class="col-12">
+                <h2>Usuarios en @Model.descripcion</h2>
+                <hr />
+            </div>
+
+            <div class="col-12">
+                @if (usuariosIdioma.Count == 0)
+                {
+                    <p class="alert alert-danger">No hay ningún usuario que está utilizando el idioma <strong>@Model.descripcion</strong></p>
+                }
+                else
+                {
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>IdUsuario</th>
+                                <th>NombreUsuario</th>
+                                <th>Correo</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var usuario in usuariosIdioma)
+                            {
+                                <tr>
+                                    <td>@usuario.IdUsuario</td>
+                                    <td>@usuario.Inicio</td>
+                                    <td>@usuario.Email</td>
+                                    <td>@Html.ActionLink("Detalles", "Detalles", "Usuario", new { @idUsuario = usuario.IdUsuario }, new { @class = "bnt bnt-secondary" })</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                }
+
+            </div>
+        </div>
+    </div>
+    </div>
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="lblmodal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="lblmodal">Eliminar Iidoma</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de eliminar el idioma <strong>@Model.descripcion</strong>?</p>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                @Html.ActionLink("Eliminar Idioma", "Eliminar", "Idiomas", new { @idIdioma = Model.idIdioma }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+    </div>
+</div>
+

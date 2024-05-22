@@ -1,0 +1,368 @@
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\NTTShopAdmin.dll.config
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\NTTShopAdmin.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\NTTShopAdmin.pdb
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\csc.exe
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\csc.exe.config
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\csc.rsp
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\csi.exe
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\csi.exe.config
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\csi.rsp
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.AppContext.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Console.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.IO.Compression.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Net.Http.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Net.Sockets.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.ValueTuple.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Xml.XPath.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\vbc.exe
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\vbc.exe.config
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\vbc.rsp
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\VBCSCompiler.exe
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\Antlr3.Runtime.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\Newtonsoft.Json.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.Helpers.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.Mvc.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.Optimization.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.Razor.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.WebPages.Deployment.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.WebPages.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.WebPages.Razor.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\WebGrease.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.Helpers.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.Mvc.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.Optimization.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.Razor.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.WebPages.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.WebPages.Deployment.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\System.Web.WebPages.Razor.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\Newtonsoft.Json.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\Antlr3.Runtime.pdb
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\es\System.Web.Helpers.resources.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\es\System.Web.Mvc.resources.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\es\System.Web.Optimization.resources.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\es\System.Web.Razor.resources.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\es\System.Web.WebPages.resources.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.AssemblyReference.cache
+C:\Users\jruizdea\Desktop\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.CoreCompileInputs.cache
+C:\Users\jruizdea\Desktop\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.CopyComplete
+C:\Users\jruizdea\Desktop\NTTShopAdmin\obj\Debug\NTTShopAdmin.dll
+C:\Users\jruizdea\Desktop\NTTShopAdmin\obj\Debug\NTTShopAdmin.pdb
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\NTTShopAdmin.dll.config
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\NTTShopAdmin.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\NTTShopAdmin.pdb
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\csc.exe
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\csc.exe.config
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\csc.rsp
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\csi.exe
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\csi.exe.config
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\csi.rsp
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.AppContext.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Console.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.IO.Compression.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Net.Http.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Net.Sockets.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.ValueTuple.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Xml.XPath.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\vbc.exe
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\vbc.exe.config
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\vbc.rsp
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\VBCSCompiler.exe
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\Antlr3.Runtime.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\Newtonsoft.Json.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.Helpers.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.Mvc.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.Optimization.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.Razor.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.WebPages.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.WebPages.Razor.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\WebGrease.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.Helpers.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.Mvc.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.Optimization.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.Razor.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.WebPages.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\System.Web.WebPages.Razor.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\Newtonsoft.Json.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\Antlr3.Runtime.pdb
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\es\System.Web.Helpers.resources.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\es\System.Web.Mvc.resources.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\es\System.Web.Optimization.resources.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\es\System.Web.Razor.resources.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\es\System.Web.WebPages.resources.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\obj\Debug\NTTShopAdmin.csprojAssemblyReference.cache
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.CoreCompileInputs.cache
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.CopyComplete
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\obj\Debug\NTTShopAdmin.dll
+C:\Users\ipacheco\OneDrive - everis\CONFIDENCIAL\FCT_Formacion\Proyecto\NTTShopAdmin\obj\Debug\NTTShopAdmin.pdb
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\NTTShopAdmin.dll.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\NTTShopAdmin.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\NTTShopAdmin.pdb
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\csc.exe
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\csc.exe.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\csc.rsp
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\csi.exe
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\csi.exe.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\csi.rsp
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.AppContext.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Console.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.IO.Compression.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Net.Http.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Net.Sockets.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.ValueTuple.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Xml.XPath.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\vbc.exe
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\vbc.exe.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\vbc.rsp
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\VBCSCompiler.exe
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\Antlr3.Runtime.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\Newtonsoft.Json.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.Helpers.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.Mvc.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.Optimization.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.Razor.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.WebPages.Deployment.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.WebPages.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.WebPages.Razor.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\WebGrease.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.Helpers.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.Mvc.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.Optimization.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.Razor.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.WebPages.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.WebPages.Deployment.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\System.Web.WebPages.Razor.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\Newtonsoft.Json.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\Antlr3.Runtime.pdb
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\es\System.Web.Helpers.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\es\System.Web.Mvc.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\es\System.Web.Optimization.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\es\System.Web.Razor.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\es\System.Web.WebPages.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.AssemblyReference.cache
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.CoreCompileInputs.cache
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\obj\Debug\NTTShopA.1827A342.Up2Date
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\obj\Debug\NTTShopAdmin.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\obj\Debug\NTTShopAdmin.pdb
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\PagedList.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\PagedList.Mvc.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\PagedList.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTShopAdmin\NTTShopAdmin\bin\PagedList.Mvc.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\NTTShopAdmin.dll.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\NTTShopAdmin.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\NTTShopAdmin.pdb
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\csc.exe
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\csc.exe.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\csc.rsp
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\csi.exe
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\csi.exe.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\csi.rsp
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.AppContext.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Console.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.IO.Compression.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Net.Http.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Net.Sockets.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.ValueTuple.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Xml.XPath.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\vbc.exe
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\vbc.exe.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\vbc.rsp
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\VBCSCompiler.exe
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Antlr3.Runtime.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Newtonsoft.Json.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\PagedList.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\PagedList.Mvc.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Buffers.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.IO.Pipelines.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Memory.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Numerics.Vectors.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.Helpers.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.Mvc.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.Optimization.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.Razor.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.WebPages.Deployment.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.WebPages.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.WebPages.Razor.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\WebGrease.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\PagedList.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\PagedList.Mvc.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Buffers.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.IO.Pipelines.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Memory.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Numerics.Vectors.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.Helpers.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.Mvc.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.Optimization.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.Razor.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.WebPages.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.WebPages.Deployment.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\System.Web.WebPages.Razor.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Newtonsoft.Json.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Antlr3.Runtime.pdb
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\es\System.Web.Helpers.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\es\System.Web.Mvc.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\es\System.Web.Optimization.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\es\System.Web.Razor.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\es\System.Web.WebPages.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.AssemblyReference.cache
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\obj\Debug\NTTShopAdmin.csproj.CoreCompileInputs.cache
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\obj\Debug\NTTShopA.1827A342.Up2Date
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\obj\Debug\NTTShopAdmin.dll
+C:\Users\lmaciabo\OneDrive - NTT DATA EMEAL\Escritorio\NTTSHOP\NTTShopAdmin\obj\Debug\NTTShopAdmin.pdb

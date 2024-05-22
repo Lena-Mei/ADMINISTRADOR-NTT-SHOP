@@ -1,0 +1,196 @@
+﻿@model NTTShopAdmin.Models.Pedido
+@{
+    ViewBag.Title = "Detalle";
+
+    var estados = ViewBag.Estados as List<NTTShopAdmin.Models.Estado>; // Obtener la lista de estados desde ViewBag y convertirla a List<Estado>
+    var usuarios = ViewBag.Usuarios as List<NTTShopAdmin.Models.Usuario>;
+}
+
+<div class="row">
+    <div class="col-6">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Detalle Pedido</h5>
+                        <hr />
+                    </div>
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-2">
+                                <p class="fw-bold">IdPedido:</p>
+                            </div>
+                            <div class="col-10">
+                                @Html.DisplayFor(p => p.idPedido)
+                            </div>
+                            <div class="col-2">
+                                <p class="fw-bold">Fecha:</p>
+                            </div>
+                            <div class="col-10">
+                                @Html.DisplayFor(p => p.fechaPedido)
+                            </div>
+
+                            <div class="col-2">
+                                <p class="fw-bold">Estado:</p>
+                            </div>
+                            <div class="col-10">
+                                @foreach (var estado in estados)
+                                {
+                                    if (estado.idEstado == Model.idEstado)
+                                    {
+                                        @estado.descripcion
+                                    }
+                                }
+                            </div>
+                            <div class="col-2">
+                                <p class="fw-bold">Usuario:</p>
+                            </div>
+                            <div class="col-10">
+                                @foreach (var usuario in usuarios)
+                                {
+                                    if (usuario.IdUsuario == Model.idUsuario)
+                                    {
+                                        @usuario.Email
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12">
+                        <h5>Actualizar Estado:</h5>
+                        <hr />
+                    </div>
+                    <div class="col-12">
+                        @if (Model.idEstado == 1) //Si el pedido está confirmado:
+                        {
+                            <p class="alert alert-primary">El pedido está confirmado. A la espera de ser <strong>Enviado.</strong></p>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-success" disabled>Confirmar</button>
+                                <a href="@Url.Action("ActEstado", new { idPedido = Model.idPedido, idEstado = 3, idUsuario=Model.idUsuario })" class="btn btn-primary">Enviar</a>
+                                <button class="btn btn-warning" disabled>Entregar</button>
+                                <a href="@Url.Action("ActEstado", new { idPedido = Model.idPedido, idEstado = 2, idUsuario=Model.idUsuario })" class="btn btn-danger">Anular</a>
+                            </div>
+                        }
+                        @if (Model.idEstado == 5) //Si el pedido está pendiente
+                        {
+                            <p class=" alert alert-secondary">El pedido está <strong>pendiente</strong>. A la espera de ser <strong>Confirmado.</strong> por el administrador</p>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                @Html.ActionLink("Confirmar", "ActEstado", "Pedido", new { idPedido = Model.idPedido, idEstado = 1, idUsuario=Model.idUsuario }, new { @class = "btn btn-success" })
+                                <button class="btn btn-primary" disabled>Enviar</button>
+                                <button class="btn btn-warning" disabled>Entregar</button>
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
+                                    Anular
+                                </button>
+                            </div>
+                        }
+                        @if (Model.idEstado == 3) //Si el pedido está Enviado
+                        {
+                            <p class=" alert alert-warning">El pedido está <strong>enviado</strong>. A la espera de ser <strong>Entregado.</strong></p>
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-success" disabled>Confirmar</button>
+                                <button class="btn btn-primary" disabled>Enviar</button>
+                                @Html.ActionLink("Entregar", "ActEstado", "Pedido", new { idPedido = Model.idPedido, idEstado = 4, idUsuario = Model.idUsuario }, new { @class = "btn btn-warning" })
+                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
+                                    Anular
+                                </button>
+                            </div>
+
+                        }
+                        @if (Model.idEstado == 2 || Model.idEstado == 6 || Model.idEstado == 4) //Si el pedido está Anulado o Devuelto o Entregado
+                        {
+                            if (Model.idEstado == 2)
+                            {
+                                <p class=" alert alert-danger">El pedido está <strong>Anulado</strong>.</p>
+
+                            }
+                            if (Model.idEstado == 6)
+                            {
+                                <p class="alert alert-warning">El pedido ha sido <strong>devuelto</strong> por el usuario</p>
+                            }
+                            if (Model.idEstado == 4)
+                            {
+                                <p class="alert alert-success">El pedido ha sido <strong>entregado</strong></p>
+                            }
+                            <div class="btn-group" role="group" aria-label="Basic example">
+                                <button class="btn btn-success" disabled>Confirmar</button>
+                                <button class="btn btn-primary" disabled>Enviar</button>
+                                <button class="btn btn-warning" disabled>Entregar</button>
+                                <button class="btn btn-danger" disabled>Anular</button>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="row">
+            <div class="col-12">
+                <h5>Productos Seleccionados</h5>
+                <hr />
+            </div>
+            <div class="col-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>IdPorducto</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Unidades</th>
+                            <th>PrecioTotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var detalle in Model.detallePedido)
+                        {
+                            <tr>
+                                <td>@detalle.producto.idProducto</td>
+                                <td>@detalle.producto.descripcion[0].nombre</td>
+                                <td>@detalle.producto.rate[0].precio</td>
+                                <td>@detalle.unidades</td>
+                                <td>@detalle.precio</td>
+                            </tr>
+                        }
+                        <tr>
+                            <td class="fw-bold">Precio total:</td>
+                            <td> @Html.DisplayFor(p => p.totalPrecio)€</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div style="margin-top:30px;">
+        @Html.ActionLink("Volver listado Pedidos", "Index", "Pedido", null, new { @class = "btn btn-outline-secondary" })
+    </div>
+
+
+<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="lblmodal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="lblmodal">Anular Pedido</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de anular el pedido <strong>Nº @Model.idPedido</strong>?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                @Html.ActionLink("Anular", "ActEstado", "Pedido", new { idPedido = Model.idPedido, idEstado = 2 }, new { @class = "btn btn-danger" })
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+

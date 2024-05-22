@@ -1,0 +1,49 @@
+﻿@using PagedList.Mvc;
+
+@model PagedList.IPagedList<NTTShopAdmin.Models.ManagementUser>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h3>Listado Usuarios-Admin</h3>
+
+<div class="rw">
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Correo</th>
+                <th>Nombre Usuario</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var admin in Model)
+            {
+                <tr>
+                    <td>@admin.idUsuario</td>
+                    <td>@admin.email</td>
+                    <td>@admin.inicio</td>
+                    <td>
+                        <a>
+                            @Html.ActionLink("Eliminar", "Delete", "UsuarioAdmin", new { @id = admin.idUsuario }, new { @class = "btn btn-outline-danger" })
+                        </a>
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Editar", "UsuarioAdmin", new { @id = admin.idUsuario }, new { @class = "btn btn-outline-secondary" })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <div class="col-5">
+        @Html.ActionLink("Crear un nuevo Administrador", "Crear", "UsuarioAdmin", null, new { @class = "btn btn-outline-secondary" })
+    </div>
+    <div>
+
+        @Html.PagedListPager(Model, page => Url.Action("Index", "UsuarioAdmin", new { page, pageSize = ViewBag.PageSize }))
+    </div>
+</div>

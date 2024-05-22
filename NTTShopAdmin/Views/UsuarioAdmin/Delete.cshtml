@@ -1,0 +1,80 @@
+﻿@model NTTShopAdmin.Models.ManagementUser
+@{
+    ViewBag.Title = "Delete";
+}
+
+@using (Html.BeginForm("Delete", "UsuarioAdmin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <h2>Eliminar Usuario Admin</h2>
+    <div class="row">
+        <div class="col-12">
+            <h4>¿Estás seguro de eliminar el usuario seleccionado?</h4>
+            <hr />
+        </div>
+        <div class="col-2 fw-bold">
+            @Html.DisplayNameFor(model => model.idUsuario):
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.idUsuario)
+        </div>
+        <div class="col-2 fw-bold">
+            Nombre Usuario:
+        </div>
+        <div class="col-10 ">
+            @Html.DisplayFor(model => model.inicio)
+        </div>
+        <div class="col-2 fw-bold">
+            Nombre:
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.nombre)
+        </div>
+        <div class="col-2 fw-bold">
+            Apellidos:
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.apellido1) @Html.DisplayFor(model => model.apellido2)
+        </div>
+        <div class="col-2 fw-bold">
+            Email:
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.email)
+        </div>
+        <div class="col-4 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
+                Eliminar Administrador
+            </button>
+        </div>
+        <div class="col-4 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            @Html.ActionLink("Volver a la lista de Administradores", "Index", "UsuarioAdmin", null, new { @class = "btn btn-outline-secondary" })
+        </div>
+
+    </div>
+    //MODAL
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="lblmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="lblmodal">Eliminar Administrador</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de eliminar el Administrador <strong>@Model.nombre</strong>?</p> 
+                                      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrrar</button>
+                    <input type="submit" class="btn btn-danger" value="Eliminar Administrador" />
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+}
+
+
+
+

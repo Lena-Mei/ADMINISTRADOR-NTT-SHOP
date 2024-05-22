@@ -1,0 +1,86 @@
+﻿@model NTTShopAdmin.Models.ManagementUser
+
+@{
+    ViewBag.Title = "Crear";
+    var Mensaje = ViewBag.Mensaje;
+}
+
+@using (Html.BeginForm("Crear", "UsuarioAdmin", FormMethod.Post))
+{
+    <h2>Crear un nuevo Administrador</h2>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;">
+                <label class="form-label fw-bold">Nombre:</label>
+                @Html.TextBoxFor(a => a.nombre, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group" style="margin-top:15px;">
+                        <label class="form-label fw-bold">Apellido 1:</label>
+                        @Html.TextBoxFor(a => a.apellido1, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(a => a.apellido1, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group" style="margin-top:15px;">
+                        <label class="form-label fw-bold">Apellido 2:</label>
+                        @Html.TextBoxFor(a => a.apellido2, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(a => a.apellido2, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;">
+                <label class="form-label fw-bold">Correo:</label>
+                @Html.TextBoxFor(a => a.email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;">
+                <label class="form-label fw-bold">Nombre Usuario:</label>
+                @Html.TextBoxFor(a => a.inicio, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.inicio, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;">
+                <label class="form-label fw-bold">Contraseña:</label>
+                @Html.TextBoxFor(a => a.contrasenya, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.contrasenya, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group">
+                <div class="row" style=" margin-top:50px;">
+                    <div class="col-2">
+                        <div class="form-label  fw-bold">Idioma:</div>
+                    </div>
+                    <div class="col-5" @*style="padding-left:15px;"*@>
+                        @Html.DropDownListFor(a => a.isoIdioma, new SelectList(ViewBag.Idiomas, "iso", "descripcion"))
+                    </div>
+                </div>
+            </div>
+        </div>
+            @if (ViewBag.Mensaje != null)
+            {
+                <div class="col-12 d-grid gap-2 align-self-center" style="margin-top:45px;">
+                    <p class="alert alert-danger" style="margin-top:10px;"> Errror al añadir el administrador: @Mensaje</p>
+                </div>
+            }
+       
+        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            <input type="submit" value="Añadir Administrador" class="btn btn-outline-dark" />
+        </div>
+        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            @Html.ActionLink("Volver a la lista productos", "Index", "UsuarioAdmin", null, new { @class = "btn btn-outline-secondary" })
+        </div>
+    </div>
+}
+
+

@@ -1,0 +1,91 @@
+﻿@model NTTShopAdmin.Models.ManagementUser
+@{
+    ViewBag.Title = "Editar";
+}
+
+@using (Html.BeginForm("Editar", "UsuarioAdmin", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <h2>Editar</h2>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;">
+                <label class="form-label fw-bold">Nombre:</label>
+                @Html.TextBoxFor(a => a.nombre, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.nombre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;">
+                <label class="form-label fw-bold">Apellidos:</label>
+                <div class="row">
+                    <div class="col-6">
+                        @Html.TextBoxFor(a => a.apellido1, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(a => a.apellido1, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="col-6">
+                        @Html.TextBoxFor(a => a.apellido2, new { @class = "form-control" })
+
+                        @Html.ValidationMessageFor(a => a.apellido2, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;">
+                <label class="form-label fw-bold">Correo:</label>
+                @Html.TextBoxFor(a => a.email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;">
+                <label class="form-label fw-bold">Usuario:</label>
+                @Html.TextBoxFor(a => a.inicio, new { @class = "form-control", @disabled = "disabled" })
+                @Html.ValidationMessageFor(a => a.inicio)
+                @Html.HiddenFor(a => a.inicio)
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;" hidden>
+                <label class="form-label fw-bold">Correo:</label>
+                @Html.TextBoxFor(a => a.idUsuario, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.idUsuario)
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="form-group" style="margin-top:15px;" hidden>
+                <label class="form-label fw-bold">Correo:</label>
+                @Html.TextBoxFor(a => a.isoIdioma, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.isoIdioma)
+            </div>
+        </div>
+
+        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            <input type="submit" value="Guardar Datos" class="btn btn-outline-dark" />
+
+        </div>
+        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+           @Html.ActionLink("Cambiar Contraseña", "CambiarContra", "UsuarioAdmin", new {@idAdmin = Model.idUsuario}, new {@class="btn btn-outline-dark"})
+        </div>
+        <div class="col-12 d-grid gap-2" style="margin-top:25px;">
+            @Html.ActionLink("Volver a la lista de administradores", "Index", "UsuarioAdmin", null, new {@class="btn btn-secondary"})
+        </div>
+        <div class="col-12">
+            @if (ViewData["error"] != null)
+            {
+                <p class="alert alert-danger" style="margin-top:10px;">@ViewData["error"]</p>
+            }
+            @if (ViewData["correcto"] is true)
+            {
+                <p class="alert alert-success" style="margin-top:10px;">Se han guardado correctamente los datos</p>
+            }
+        </div>
+
+    </div>
+}
+

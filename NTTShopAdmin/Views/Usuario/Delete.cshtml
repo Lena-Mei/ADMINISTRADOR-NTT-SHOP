@@ -1,0 +1,76 @@
+﻿@model NTTShopAdmin.Models.Usuario
+@{
+    ViewBag.Title = "Delete";
+    string estado = ViewData["estado"].ToString();
+}
+
+
+<h2>Eliminar usuario</h2>
+@using (Html.BeginForm("Delete", "Usuario", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+        <div class="col-12">
+            <h4>¿Estás seguro de eliminar el usuario seleccionado?</h4>
+            <hr />
+        </div>
+        <div class="col-2 fw-bold">
+            Id usuario:
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.IdUsuario)
+        </div>
+        <div class="col-2 fw-bold">
+            Nombre usuario:
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.Inicio)
+        </div>
+        <div class="col-2 fw-bold">
+            Correo:
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+        <div class="col-2 fw-bold">
+            Nombre:
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.Nombre)
+        </div>
+        <div class="col-2 fw-bold">
+            Apellidos:
+        </div>
+        <div class="col-10">
+            @Html.DisplayFor(model => model.Apellido1)@Html.DisplayFor(model => model.Apellido2)
+        </div>
+        <div class="col-2 fw-bold">
+            Teléfono:
+        </div>
+        <div class="col-10">
+            @if (string.IsNullOrEmpty(Model.Telefono))
+            {
+                <p>-</p>
+                }
+            else
+            {
+                @Html.DisplayFor(model => model.Telefono)
+            }
+
+        </div>
+        <div class="col-12" style="margin-top:20px;">
+            <a>@Html.ActionLink("Volver a la lista de usuarios", "Index", "Usuario", null, new { @class = "btn btn-outline-secondary" })</a>
+            @if (estado == "1")
+            {
+                <p class="alert alert-danger" style="margin-top:10px;">El usuario tiene algún pedido pendiente.</p>
+            }
+            else
+            {
+
+                <input type="submit" class="btn btn-danger" value="Eliminar usuario"  />
+            }
+
+        </div>
+    </div>
+
+}

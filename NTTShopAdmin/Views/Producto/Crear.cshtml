@@ -1,0 +1,125 @@
+﻿@model NTTShopAdmin.Models.Producto
+@{
+    ViewBag.Title = "Crear";
+
+}
+
+@using (Html.BeginForm("Crear", "Producto", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <h2>Añadir Producto</h2>
+    <div class="row">
+        <div class="col-5">
+            <div class="row">
+                <div class="col-12">
+                    <h5>Producto</h5>
+                    <hr />
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group" style="margin-top:15px;">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <label class="form-label fw-bold">Stock:</label>
+                                    </div>
+                                    <div class="col-9">
+                                        @Html.EditorFor(a => a.stock, new { @class = "form-control" })
+                                    </div>
+                                    @Html.ValidationMessageFor(a => a.stock, "", new { @class = "text-danger" })
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group" style="margin-top:15px;">
+                                <label class="form-label fw-bold">Habilitado:</label>
+                                @Html.EditorFor(a => a.habilitado, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12" style="margin-top:20px;">
+                    <h5>Tarifa</h5>
+                    <hr />
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-6">
+                                <p>Tipo de tarifa:</p>
+                            </div>
+                            <div class="col-6">
+                                <div class="form-group">
+                                    @Html.DropDownListFor(model => model.rate[0].idRate, new SelectList(ViewBag.Rates, "idRate", "descripcion", "Elegir tarifa"))
+                                    @Html.ValidationMessageFor(a => a.rate[0].idRate, "", new { @class = "text-danger" })
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-7">
+            <div class="row" style="padding-left:10px;">
+                <div class="col-12">
+                    <h5>Descripción Producto</h5>
+                    <hr />
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="form-label fw-bold">Nombre Producto:</div>
+                                @Html.TextBoxFor(a => a.descripcion[0].nombre, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(a => a.descripcion[0].nombre, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="form-label fw-bold">Descripción del Producto:</div>
+                                @Html.TextAreaFor(a => a.descripcion[0].descripcion, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(a => a.descripcion[0].descripcion, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="col-6" style="margin-top:20px;">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="form-label fw-bold">Idioma:</div>
+                                    </div>
+                                    <div class="col-5" style="padding-left:15px;">
+                                        @Html.DropDownListFor(model => model.descripcion[0].isoIdioma, new SelectList(ViewBag.Idiomas, "iso", "descripcion"))
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (ViewData["mensaje"] != null)
+        {
+            <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+                <p class="alert alert-success" style="margin-top:10px;"> @ViewData["mensaje"]</p>
+            </div>
+        }
+        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            @Html.ActionLink("Volver a la lista productos", "Index", "Producto", null, new { @class = "btn btn-outline-secondary" })
+        </div>
+        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            <input type="submit" value="Añadir producto" class="btn btn-outline-dark" />
+        </div>
+
+
+    </div>
+
+
+
+}
+
+
+

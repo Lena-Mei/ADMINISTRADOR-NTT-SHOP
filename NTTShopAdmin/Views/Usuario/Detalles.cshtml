@@ -1,0 +1,218 @@
+﻿@model NTTShopAdmin.Models.Usuario
+@{
+    ViewBag.Title = "Detalles";
+    var pedidos = ViewBag.Pedidos as List<NTTShopAdmin.Models.Pedido>;
+    var estados = ViewBag.Estados as List<NTTShopAdmin.Models.Estado>; // Obtener la lista de estados desde ViewBag y convertirla a List<Estado>
+
+
+
+}
+@using (Html.BeginForm("Actualizar", "Usuario", FormMethod.Post))
+{
+    <div class="row">
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+                    <h3>Detalle Usuario</h3>
+                    <hr />
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="fw-bold">IdUsuario:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.IdUsuario)
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold">Nombre:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.Nombre)
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold">Correo:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.Email)
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold">Provincia:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.Provincia)
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold">Dirección:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.Direccion)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="fw-bold">Usuario:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.Inicio)
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold">Apellidos:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.Apellido1) @Html.DisplayFor(u => u.Apellido2)
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold">Teléfono:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.Telefono)
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold">Ciudad:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.Ciudad)
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold">CP:</p>
+                                </div>
+                                <div class="col-8">
+                                    @Html.DisplayFor(u => u.CodigoPostal)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-4">
+                                       <label class="form-label fw-bold">Tipo Rate:</label>
+                                       </div>
+                                    <div class="col-4">
+                                        @Html.DropDownListFor(u => u.idRate, new SelectList(ViewBag.Rate, "idRate", "descripcion", Model.idRate))
+                                        @Html.HiddenFor(u => u.idRate)
+                                        @Html.HiddenFor(u => u.Ciudad)
+                                        @Html.HiddenFor(u => u.CodigoPostal)
+                                        @Html.HiddenFor(u => u.Telefono)
+                                        @Html.HiddenFor(u => u.Apellido1)
+                                        @Html.HiddenFor(u => u.Apellido2)
+                                        @Html.HiddenFor(u => u.Inicio)
+                                        @Html.HiddenFor(u => u.Direccion)
+                                        @Html.HiddenFor(u => u.IdUsuario)
+                                        @Html.HiddenFor(u => u.Nombre)
+                                        @Html.HiddenFor(u => u.Provincia)
+                                        @Html.HiddenFor(u => u.IsoIdioma)
+                                        @Html.HiddenFor(u => u.Email)
+                                        @Html.HiddenFor(u => u.Contrasenya)
+                                    </div>
+                                    <div class="col-4">
+                                            <input type="submit" value="Actualizar" class="btn btn-outline-dark" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <h5>Eliminar Usuario</h5>
+                    <hr />
+                </div>
+                <div class=col-12>
+                    @if (pedidos.Count > 0)
+                    {
+                        <div class="row">
+                            <div class="col-4">
+                                @Html.ActionLink("Volver Listado Usuarios", "Index", "Usuario", null, new { @class = "btn btn-secondary" })
+
+                            </div>
+                            <div class="col-8">
+                                <p class="alert alert-danger">NO se puede ELIMINAR este usuario porque tiene PEDIDOS realizados.</p>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal">
+                            Eliminar Usuario
+                        </button>
+                        @Html.ActionLink("Volver Listado Usuarios", "Index", "Usuario", null, new { @class = "btn btn-secondary" })
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Pedidos</h2>
+                    <hr />
+                </div>
+
+                <div class="col-12">
+                    @if (pedidos.Count == 0)
+                    {
+                        <p class="alert alert-danger">El usuario no ha realizado ningún pedido.</p>
+                    }
+                    else
+                    {
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>idPedido</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var pedido in pedidos)
+                                {
+                                    <tr>
+                                        <td>@pedido.idPedido</td>
+                                        <td>@pedido.fechaPedido</td>
+                                        <td>
+                                            @foreach (var estado in estados)
+                                            {
+                                                if (estado.idEstado == pedido.idEstado)
+                                                {
+                                                    @estado.descripcion
+                                                }
+                                            }
+                                        </td>
+                                        <td>@pedido.totalPrecio</td>
+                                        <td>@Html.ActionLink("Detalles", "Detalle", "Pedido", new { @idPedido = pedido.idPedido }, new { @class = "bnt bnt-secondary" })</td>
+                                    </tr>
+                                }
+
+                            </tbody>
+                        </table>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="lblmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="lblmodal">Eliminar Usuario</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de eliminar al usuario <strong>@Model.Nombre @Model.Apellido1 @Model.Apellido2</strong>?</p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                    @Html.ActionLink("Eliminar usuario", "Delete", "Usuario", new { @idUsuario = Model.IdUsuario }, new { @class = "btn btn-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

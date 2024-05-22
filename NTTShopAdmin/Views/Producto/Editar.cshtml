@@ -1,0 +1,281 @@
+﻿@model NTTShopAdmin.Models.Editar
+
+@{
+    ViewBag.Title = "Editar";
+    var correcto = TempData["correcto"];
+}
+@using (Html.BeginForm("Editar", "Producto", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="row">
+
+        <div class="col-4">
+            <div class="row">
+                <div class="col-12">
+                     <h2>Editar Producto</h2>    
+                    <hr />
+                </div>
+            <div class="card">
+                <div class="row" style="margin-bottom:10px;">
+                    <div class="col-4">
+                        <div class="form-group" style="margin-top:15px;">
+                            <label class="form-label fw-bold">idProducto:</label>
+                            @Html.TextBoxFor(p => p.producto.idProducto, new { @class = "form-control", @disabled = "disabled" })
+                            @Html.HiddenFor(p => p.producto.idProducto)
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group" style="margin-top:15px;">
+                            <label class="form-label fw-bold">stock:</label>
+                            @Html.TextBoxFor(p => p.producto.stock, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(p => p.producto.stock, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group" style="margin-top:15px;">
+                            <label class="form-label fw-bold">Habilitado:</label>
+                            @Html.EditorFor(p => p.producto.habilitado)
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="form-group" style="margin-top:15px;">
+                            <label class="form-label fw-bold">imagen:</label>
+                            @Html.TextBoxFor(p => p.producto.imagen)
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    @if (correcto != null)
+                    {
+                        if (correcto is true)
+                        {
+                            <p class="alert alert-success" style="margin-top:10px;">Se ha actualizado correctamente</p>
+                        }
+                        else
+                        {
+                            <p class="alert alert-danger" style="margin-top:10px;">No se ha actualizado correctamente los datos</p>
+                        }
+                    }
+
+                </div>
+                </div>
+    
+
+            <div class="col-12">
+                <h2>Editar Tarifas</h2>
+                <hr />
+            </div>
+            <div class="col-12">
+                <div class="row row-cols-1">
+                    @for (int i = 0; i < Model.producto.rate.Count; i++)
+                    {
+                        <div class="col mb-4">
+                            <div class="card h-90">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tarifa nº @(i+1)</h5>
+                                    <div class="row align-items-end">
+                                        <div class="col-12">
+                                            <div class="form-group" style="margin-top:15px;" hidden>
+                                                <label class="form-label fw-bold">Producto:</label>
+                                                @Html.TextBoxFor(a => a.producto.rate[i].idProducto, new { @class = "form-control", @disabled = "disabled" })
+                                                @Html.HiddenFor(a => a.producto.rate[i].idProducto)
+                                            </div>
+                                        </div>
+                                        <div class="col-12" style="margin-top:15px;">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-4">
+                                                        <label class="form-label fw-bold">Tipo Tarifa:</label>
+                                                    </div>
+                                                    <div class="col-8">
+                                                        @*@Html.TextBoxFor(a => a.producto.rate[i].idRate, new { @class = "form-control", @disabled = "disabled" })*@
+                                                        @Html.DropDownListFor(a => a.producto.rate[i].idRate, new SelectList(ViewBag.Rates, "idRate", "descripcion", Model.producto.rate[i].idRate), new { @disabled = "disabled" })
+                                                        @Html.HiddenFor(a => a.producto.rate[i].idRate)
+                                                        @Html.ValidationMessageFor(a => a.producto.rate[i].idRate)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12" style="margin-top:15px;">
+                                            <div class="form-group">
+                                                <div class="row">
+                                                    <div class="col-2">
+                                                        <label class="form-label fw-bold">Precio:</label>
+                                                    </div>
+                                                    <div class="col-5">
+                                                        @Html.TextBoxFor(a => a.producto.rate[i].precio, new { @class = "form-control" })
+                                                        @Html.ValidationMessageFor(a => a.producto.rate[i].precio, "", new { @class = "text-danger" })
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    <div class="accordion" id="acix">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pox" aria-expanded="false" aria-controls="pox">
+                                    Nueva Tarifa
+                                </button>
+                            </h2>
+                            <div id="pox" class="accordion-collapse collapse" data-bs-parent="#acix">
+                                <div class="accordion-body">
+                                    <div class="col-12">
+                                        <div class="form-group" style="margin-top:15px;">
+                                            <label class="form-label fw-bold">IdRate:</label> @*DropDownList*@
+                                            @Html.DropDownListFor(model => model.productoRate.idRate, new SelectList(ViewBag.Rates, "idRate", "descripcion"), "Elegir Tarifa")
+                                            @Html.ValidationMessageFor(model => model.productoRate.idRate, "", new { @class = "text-danger" })
+
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group" style="margin-top:15px;" hidden>
+                                            <label class="form-label fw-bold">IdProducto:</label>
+                                            @Html.TextBoxFor(p => p.producto.idProducto, new { @class = "form-control", @disabled = "disabled" })
+                                            @Html.HiddenFor(p => p.producto.idProducto)
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="margin-top:15px;">
+                                        <label class="form-label fw-bold">Precio:</label>
+                                        @Html.TextBoxFor(model => model.productoRate.precio, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.productoRate.precio, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    <div class="col-8">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <h2>Descricpiones Producto</h2>
+                    </div>
+                    <div class="col-3  d-grid gap-2 align-self-center">
+                        <input type="submit" value="Actualizar" class="btn btn-outline-dark" />
+                    </div>
+                    <div class="col-3  d-grid gap-2 align-self-center">
+                        <a>@Html.ActionLink("Volver al listado", "Index", "Producto", null, new { @class = "btn btn-outline-secondary" })</a>
+                    </div>
+                </div>
+                <hr />
+            </div>
+            <div class="col-12">
+                <div class="row row-cols-3">
+                    @for (int i = 0; i < Model.producto.descripcion.Count; i++)
+                    {
+
+                        <div class="col mb-4">
+                            <div class="card h-90">
+                                <div class="card-body">
+                                    <h5 class="card-title"> IdDesProducto:@Html.TextBoxFor(a => a.producto.descripcion[i].idDesProducto, new { @class = "form-control", @disabled = "disabled" })  @Html.HiddenFor(a => a.producto.descripcion[i].idDesProducto)</h5>
+                                    <div class="row align-items-end">
+                                        <div class="col-12">
+                                            <div class="form-group" style="margin-top:15px;">
+                                                <label class="form-label fw-bold">Nombre:</label>
+                                                @Html.TextBoxFor(a => a.producto.descripcion[i].nombre, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(a => a.producto.descripcion[i].nombre, "", new { @class = "text-danger" })
+
+
+                                                @*@Html.TextBoxFor(model => model.descripcion[i].nombre, new { @class = "form-control" })*@
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group" style="margin-top:15px;">
+                                                <label class="form-label fw-bold">Descripcion:</label>
+                                                @Html.TextAreaFor(a => a.producto.descripcion[i].descripcion, new { @class = "form-control" })
+                                                @Html.ValidationMessageFor(a => a.producto.descripcion[i].descripcion, "", new { @class = "text-danger" })
+
+                                                @*@Html.TextAreaFor(model => model.descripcion[i].descripcion, new { @class = "form-control" })*@
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-group" style="margin-top:15px;" hidden>
+                                                <label class="form-label fw-bold">IdProducto:</label>
+                                                @Html.TextBoxFor(a => a.producto.descripcion[i].idProducto, new { @class = "form-control", @disabled = "disabled" })
+                                                @Html.HiddenFor(a => a.producto.descripcion[i].idProducto)
+                                                @*@Html.TextAreaFor(model => model.descripcion[i].descripcion, new { @class = "form-control" })*@
+                                            </div>
+                                        </div>
+                                        <div class="col-12" style="margin-top:10px;">
+                                            <div class="form-group">
+                                                <label class="form-label fw-bold">Idioma:</label>
+                                                @Html.DropDownListFor(a => a.producto.descripcion[i].isoIdioma, new SelectList(ViewBag.Idiomas, "iso", "descripcion", Model.producto.descripcion[i].isoIdioma))
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    <div class="accordion" id="acex">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Nueva Descripción
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="col-12">
+                                        <div class="form-group" style="margin-top:15px;" hidden>
+                                            <label class="form-label fw-bold">IdProducto:</label>
+                                            @Html.TextBoxFor(model => model.desProducto.idDesProducto, new { @class = "form-control", @disabled = "disabled" })  @Html.HiddenFor(model => model.desProducto.idDesProducto)
+                                            @*@Html.TextAreaFor(model => model.descripcion[i].descripcion, new { @class = "form-control" })*@
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group" style="margin-top:15px;" hidden>
+                                            <label class="form-label fw-bold">IdProducto:</label>
+                                            @Html.TextBoxFor(p => p.producto.idProducto, new { @class = "form-control", @disabled = "disabled" })
+                                            @Html.HiddenFor(p => p.producto.idProducto)
+                                            @*@Html.TextAreaFor(model => model.descripcion[i].descripcion, new { @class = "form-control" })*@
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="margin-top:15px;">
+                                        <label class="form-label fw-bold">Nombre:</label>
+                                        @Html.TextBoxFor(model => model.desProducto.nombre, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.desProducto.nombre, "", new { @class = "text-danger" })
+
+
+                                        @*@Html.TextBoxFor(model => model.descripcion[i].nombre, new { @class = "form-control" })*@
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-group" style="margin-top:15px;">
+                                            <label class="form-label fw-bold">Descripcion:</label>
+                                            @Html.TextAreaFor(model => model.desProducto.descripcion, new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.desProducto.descripcion, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-12" style="margin-top:10px;">
+                                        <div class="form-group">
+                                            <label class="form-label fw-bold">Idioma:</label>
+                                            @Html.DropDownListFor(model => model.desProducto.isoIdioma, new SelectList(ViewBag.Idiomas, "iso", "descripcion"))
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+}

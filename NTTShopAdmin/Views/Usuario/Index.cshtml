@@ -1,0 +1,92 @@
+﻿@using PagedList.Mvc;
+
+@model  PagedList.IPagedList<NTTShopAdmin.Models.Usuario>
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-4">
+        <h1>Lista de Usuarios</h1>
+    </div>
+    <div class="col-8">
+        <form asp-action="Index" method="get">
+            <div class="row align-items-start">
+                <div class="col-5">
+                    <div class="form-group">
+                        <input type="text" name="strBusqueda" value="@ViewBag.SearchString" class="form-control" placeholder="Buscar por nombre..." />
+                    </div>
+                </div>
+                <div class="col-7 align-self-end">
+                    <div class="form-group">
+                        <input type="submit" value="Buscar " class="btn btn-default" />
+                        |
+                        @Html.ActionLink("Lista Completa", "Index", "Usuario", new { page = 1, pageSize = ViewBag.PageSize }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Correo
+                    </th>
+                    <th>
+                        Nombre
+                    </th>
+                    <th>Teléfono</th>
+
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var usuario in Model)
+                {
+                    <tr>
+                        <td>
+                            @usuario.IdUsuario
+                        </td>
+                        <td>@usuario.Email</td>
+                        <td>@usuario.Nombre @usuario.Apellido1</td>
+                        @if (usuario.Telefono == "" || usuario.Telefono == null)
+                        {
+                            <td class="text-center">-</td>
+                        }
+                        else
+                        {
+                            <td>@usuario.Telefono</td>
+                        }
+
+                        <td>
+                            <a>
+                                @Html.ActionLink("Detalles", "Detalles", "Usuario", new { @idUsuario = usuario.IdUsuario }, new { @class = "btn btn-outline-secondary" })
+                            </a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<div style="margin:0;">
+
+    @Html.PagedListPager(Model, page => Url.Action("Index", "Usuario", new { page, pageSize = ViewBag.PageSize }))
+</div>
+
+
+@*<br />
+Page @( Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+<br />
+Total Item Count @Model.TotalItemCount*@
+
+

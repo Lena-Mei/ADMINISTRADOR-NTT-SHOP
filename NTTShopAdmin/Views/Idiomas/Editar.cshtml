@@ -1,0 +1,55 @@
+﻿@model NTTShopAdmin.Models.Idioma
+
+<h2>Editar Idioma</h2>
+@using (Html.BeginForm("Editar", "Idiomas", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <h2>Editar</h2>
+    <div class="row">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group" style="margin-top:15px;">
+                        <label class="form-label fw-bold">ISO:</label>
+                        @Html.TextBoxFor(a => a.iso, new { @class = "form-control", @disabled = "disabled" })
+                        @Html.ValidationMessageFor(a => a.iso)
+                        @Html.HiddenFor(a => a.iso)
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="form-group" style="margin-top:15px;">
+                        <label class="form-label fw-bold">Descripcion:</label>
+                        @Html.TextBoxFor(a => a.descripcion, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(a => a.descripcion, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="form-group" style="margin-top:15px;" hidden>
+                        <label class="form-label fw-bold">Descripcion:</label>
+                        @Html.TextBoxFor(a => a.idIdioma, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(a => a.idIdioma, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="col-12">
+        @if (ViewData["error"] != null)
+        {
+            <p class="alert alert-danger" style="margin-top:10px;">@ViewData["error"]</p>
+        }
+        @if (ViewData["correcto"] is true)
+        {
+            <p class="alert alert-success" style="margin-top:10px;">Se han guardado correctamente los datos</p>
+        }
+    </div>
+        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            <input type="submit" value="Guardar Datos" class="btn btn-outline-dark" />
+
+        </div>
+        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            @Html.ActionLink("Volver a la lista idiomas", "Index", "Idiomas", null, new { @class = "btn btn-outline-dark" })
+        </div>
+    </div>
+}
+

@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+@model NTTShopAdmin.Models.ManagementUser
+
+@using (Html.BeginForm("Login", "Login", FormMethod.Post))
+{
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <h2 class="text-center">Iniciar Sesión</h2>
+            <hr />
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            @if (@ViewBag.Message != null)
+            {
+                <div style="border: 1px solid red">
+                    @ViewBag.Message
+                </div>
+            }
+            <div class="form-group">
+                <label class="form-label fw-bold">Usuario:</label> <br />
+                @Html.TextBoxFor(a => a.inicio,  new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.inicio)
+            </div>
+            <div class="form-group">
+                <label class="form-label fw-bold">Contraseña:</label><br />
+                @Html.PasswordFor(a => a.contrasenya, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.contrasenya)
+            </div>
+            @if (ViewData["errorMensaje"] != null)
+            {
+                <p class="alert alert-danger"  style="margin-top:10px;">@ViewData["errorMensaje"]</p>
+            }
+            <div class="col-12 d-grid" style="margin-top:10px;"> 
+                <input type="submit" value="Login" class="btn btn-outline-secondary" />
+            </div>
+        </div>
+    </div>
+        @*<legend>Introduzca las credenciales del usuario administrador</legend>*@
+
+      
+}

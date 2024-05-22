@@ -1,0 +1,106 @@
+﻿@using PagedList.Mvc;
+
+@model PagedList.IPagedList<NTTShopAdmin.Models.Pedido>
+@{
+    ViewBag.Title = "Index";
+
+    var estados = ViewBag.Estados as List<NTTShopAdmin.Models.Estado>; // Obtener la lista de estados desde ViewBag y convertirla a List<Estado>
+    var usuarios = ViewBag.Usuarios as List<NTTShopAdmin.Models.Usuario>;
+
+
+}
+
+<div class="row">
+    <div class="col-4">
+        <h1>Lista de Pedidos</h1>
+    </div>
+    <div class="col-8">
+        <form asp-action="Index" method="get">
+            <div class="row align-items-start">
+                <div class="col-3">
+                    <div class="form-group">
+                        <input type="date" name="desde" value="@ViewBag.Desde" class="form-control" placeholder="Buscar por fecha desde..." />
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <input type="date" name="hasta" value="@ViewBag.Hasta" class="form-control" placeholder="Buscar por fecha hasta..." />
+                        
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <select name="idEstado" class="form-control">
+                            <option value="">Todos los estados</option>
+                            @foreach (var estado in estados)
+                            {
+                                <option value="@estado.idEstado" @(estado.idEstado == ViewBag.Estado ? "selected" : "")>@estado.descripcion</option>
+                            }
+                        </select>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="form-group">
+                        <input type="submit" value="Buscar" class="btn btn-default" />
+                        |
+                        @Html.ActionLink("Lista completa", "Index", "Pedido", new { page = 1, pageSize = ViewBag.PageSize }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+@if (ViewData["SinPedido"] is true)
+{
+    <p class="alert alert-danger">No hay resultados en la búsqueda </p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Usuario</th> @*Nombre dle login*@
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pedido in Model)
+            {
+                <tr>
+                    <td>@pedido.idPedido</td>
+                    <td>@pedido.fechaPedido</td>
+                    <td>
+                        @foreach (var estado in estados)
+                        {
+                            if (estado.idEstado == pedido.idEstado)
+                            {
+                                @estado.descripcion
+                            }
+                        }
+                    </td>
+                    <td>
+                        @foreach (var usuario in usuarios)
+                        {
+                            if (usuario.IdUsuario == pedido.idUsuario)
+                            {
+                                @usuario.Email
+                            }
+                        }
+                    </td>
+                    <td>@Html.ActionLink("Detalles", "Detalle", "Pedido", new { @idPedido = pedido.idPedido, @idUsuario = pedido.idUsuario }, new { @class = "btn btn-secondary" })</td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+    <div style="margin:0;">
+
+        @Html.PagedListPager(Model, page => Url.Action("Index", "Pedido", new { page, pageSize = ViewBag.PageSize }))
+    </div>
+}
+
+
+
