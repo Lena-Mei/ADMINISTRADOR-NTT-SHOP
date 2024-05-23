@@ -18,6 +18,8 @@ namespace NTTShopAdmin.Controllers
     public class UsuarioAdminController : Controller
     {
         // GET: UsuarioAdmin
+
+        //Mejoras 
         private string generalUrl = "http://localhost:5000/api/";
 
         private void DropDown()
