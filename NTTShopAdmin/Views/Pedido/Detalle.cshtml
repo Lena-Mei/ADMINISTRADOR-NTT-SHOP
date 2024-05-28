@@ -79,12 +79,11 @@
                         {
                             <p class=" alert alert-secondary">El pedido está <strong>pendiente</strong>. A la espera de ser <strong>Confirmado.</strong> por el administrador</p>
                             <div class="btn-group" role="group" aria-label="Basic example">
-                                @Html.ActionLink("Confirmar", "ActEstado", "Pedido", new { idPedido = Model.idPedido, idEstado = 1, idUsuario=Model.idUsuario }, new { @class = "btn btn-success" })
+                                @Html.ActionLink("Confirmar", "ActEstado", "Pedido", new { idPedido = Model.idPedido, idEstado = 1, idUsuario = Model.idUsuario }, new { @class = "btn btn-success" })
                                 <button class="btn btn-primary" disabled>Enviar</button>
                                 <button class="btn btn-warning" disabled>Entregar</button>
-                                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal">
-                                    Anular
-                                </button>
+                                @Html.ActionLink("Anular", "ActEstado", "Pedido", new { idPedido = Model.idPedido, idEstado = 2, idUsuario = Model.idUsuario }, new { @class = "btn btn-danger" })
+
                             </div>
                         }
                         @if (Model.idEstado == 3) //Si el pedido está Enviado
