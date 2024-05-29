@@ -21,6 +21,13 @@ namespace NTTShopAdmin.Controllers
         // GET: Idiomas
         public ActionResult Index(int? pageSize, int? page)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
+
+
             var listadoIdiomas = getAllIdiomas();
             pageSize = (pageSize ?? 5);
 
@@ -35,7 +42,11 @@ namespace NTTShopAdmin.Controllers
         [HttpGet]
         public ActionResult Editar(int? idIdioma)
         {
-            if(idIdioma == null)
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            if (idIdioma == null)
             {
                 return View("Error");
             }
@@ -51,6 +62,10 @@ namespace NTTShopAdmin.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Editar(Idioma idioma)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             string error = "";
             if (ModelState.IsValid)
             {
@@ -72,12 +87,20 @@ namespace NTTShopAdmin.Controllers
         [HttpGet]
         public ActionResult Crear()
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             return View();
         }
 
         [HttpPost]
         public ActionResult Crear (Idioma idioma)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             string mensaje = "";
             if (ModelState.IsValid)
             {
@@ -139,6 +162,10 @@ namespace NTTShopAdmin.Controllers
         [HttpGet]
         public ActionResult Eliminar(int idIdioma)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             if (EliminarIdioma(idIdioma))
             {
                 return RedirectToAction(nameof(Index));

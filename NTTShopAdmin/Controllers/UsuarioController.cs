@@ -73,6 +73,10 @@ namespace NTTShopAdmin.Controllers
         [HttpPost]
         public ActionResult Actualizar (Usuario usuario)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             bool correcto = ActualizarUsuario(usuario);
             Usuario act = GetUsuario(usuario.IdUsuario);
             if (correcto)
@@ -87,6 +91,10 @@ namespace NTTShopAdmin.Controllers
 
         public ActionResult Delete(int idUsuario)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             if (EliminarUsuario(idUsuario))
             {
                 return RedirectToAction(nameof(Index));

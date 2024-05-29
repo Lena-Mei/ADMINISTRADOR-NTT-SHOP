@@ -30,6 +30,11 @@ namespace NTTShopAdmin.Controllers
         // GET: Pedido
         public ActionResult Index(int? pageSize, int? page, DateTime? desde, DateTime? hasta, int? idEstado )
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+
             ViewData["SinPedido"] = false;
             string fechaDesde = desde?.ToString("yyyy-MM-dd");
             string fechaHasta = hasta?.ToString("yyyy-MM-dd");

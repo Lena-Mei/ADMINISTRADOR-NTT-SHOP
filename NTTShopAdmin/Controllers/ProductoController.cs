@@ -33,8 +33,8 @@ namespace NTTShopAdmin.Controllers
         // GET: Producto
         public ViewResult Index(int? pageSize, int? page, string strBusqueda)
         {
-           
-                List<Producto> listadoProductos = GetAllProducto();
+
+            List<Producto> listadoProductos = GetAllProducto();
 
                 if (!String.IsNullOrEmpty(strBusqueda))
                 {
@@ -49,8 +49,9 @@ namespace NTTShopAdmin.Controllers
 
                 ViewBag.PageSize = pageSize;
                 ViewBag.SearchString = strBusqueda;
+           
 
-                return View(listadoProductos.ToPagedList(page.Value, pageSize.Value));
+            return View(listadoProductos.ToPagedList(page.Value, pageSize.Value));
             
 
         }
@@ -67,6 +68,10 @@ namespace NTTShopAdmin.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Crear(Producto producto)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             DropDown();
             if (ModelState.IsValid)
             {
@@ -108,6 +113,10 @@ namespace NTTShopAdmin.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Editar(Editar viewModel)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             string error = "";
           
             bool rate = true;
