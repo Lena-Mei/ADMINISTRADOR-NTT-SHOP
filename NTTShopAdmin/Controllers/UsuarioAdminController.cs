@@ -29,6 +29,10 @@ namespace NTTShopAdmin.Controllers
         }
         public ActionResult Index(int? pageSize, int? page)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             if (Session["IdUser"] != null)
             {
                 var listadoAdmin = ListadoAdmin();
@@ -64,6 +68,10 @@ namespace NTTShopAdmin.Controllers
         [HttpPost]
         public ActionResult Crear(ManagementUser admin)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             string mensaje = "";
             DropDown();
             if (ModelState.IsValid)
@@ -111,6 +119,10 @@ namespace NTTShopAdmin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             if (EliminarAdmin(id))
             {
                 return RedirectToAction(nameof(Index));
@@ -146,6 +158,10 @@ namespace NTTShopAdmin.Controllers
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Editar(ManagementUser objAdmin)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             string error = "";
             if (ModelState.IsValid)
             {
@@ -175,6 +191,10 @@ namespace NTTShopAdmin.Controllers
         [HttpPost]
         public ActionResult CambiarContra(ManagementUser objAdmin)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
             if (ModelState.IsValid)
             {
                 if (CambiarContrasenya(objAdmin.idUsuario, objAdmin.contrasenya))

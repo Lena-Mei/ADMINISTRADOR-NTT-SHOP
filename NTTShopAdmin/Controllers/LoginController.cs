@@ -9,6 +9,7 @@ using System.Web;
 using NTTShopAdmin.Models;
 using System.Web.Mvc;
 using Newtonsoft.Json.Linq;
+using System.Web.UI.WebControls;
 
 
 namespace NTTShopAdmin.Controllers
@@ -21,6 +22,9 @@ namespace NTTShopAdmin.Controllers
      
         public ActionResult Login()
         {
+
+            Session["IdUser"] = null;
+            Session["LoginUser"] = null;
             return View();
         }
 
