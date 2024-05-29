@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using NTTShopAdmin.Models;
 using PagedList;
 using System;
@@ -75,6 +76,9 @@ namespace NTTShopAdmin.Controllers
         {
             if(ActualizarEstado(idPedido, idEstado))
             {
+                if (idEstado == 1) RestarStock(idPedido, idUsuario);
+                if (idEstado == 2) SumarStock(idPedido, idUsuario);
+
                 return RedirectToAction("Detalle", "Pedido", new { idPedido = idPedido, idUsuario=idUsuario });
             }
             else
@@ -83,7 +87,32 @@ namespace NTTShopAdmin.Controllers
             }
         }
 
-
+        private void RestarStock(int idPedido, int idUsuario)
+        {
+            Usuario user = GetUsuario(idUsuario);
+            Pedido ped = getPedido(idPedido, user.IsoIdioma, user.idRate);
+            Producto prod;
+            string error;
+            foreach (DetallePedido item in ped.detallePedido)
+            {
+                prod = item.producto;
+                prod.stock = prod.stock - item.unidades;
+                ActualizarProducto(prod, out error);
+            }
+        }
+        private void SumarStock(int idPedido, int idUsuario)
+        {
+            Usuario user = GetUsuario(idUsuario);
+            Pedido ped = getPedido(idPedido, user.IsoIdioma, user.idRate);
+            Producto prod;
+            string error;
+            foreach (DetallePedido item in ped.detallePedido)
+            {
+                prod = item.producto;
+                prod.stock = prod.stock + item.unidades;
+                ActualizarProducto(prod, out error);
+            }
+        }
         private Pedido getPedido(int idPedido, string idioma, int idRate)
         {
             Pedido pedido = new Pedido();
@@ -110,8 +139,51 @@ namespace NTTShopAdmin.Controllers
 
             return pedido;
         }
+        private bool ActualizarProducto(Producto producto, out string error)
+        {
+            error = "";
+            bool correcto = false;
+            var adminData = new { producto = producto };
 
-      
+            string jsonDatos = JsonConvert.SerializeObject(adminData);
+            string url = generalUrl + "Producto/updateProducto";
+            try
+            {
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Method = "PUT";
+                httpRequest.ContentType = "application/json";
+                httpRequest.Accept = "application/json";
+
+                using (var streamWriter = new StreamWriter(httpRequest.GetRequestStream()))
+                {
+
+                    streamWriter.Write(jsonDatos);
+                }
+
+                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+                HttpStatusCode httpStatus = httpResponse.StatusCode;
+
+                if (httpStatus == HttpStatusCode.OK)
+                {
+                    correcto = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("400")) //BadRequest
+                {
+                    error = "Algún dato está vacío o es nulo.";
+
+                }
+                else if (ex.Message.Contains("404")) //NotFound
+                {
+
+                    error = "Algún dato introducido ya existe o es inválido.";
+                }
+            }
+            return correcto;
+        }
         private List<Pedido> GetAllPedidos(string fechaDesde, string fechaHasta, int? idEstado = null)
         {
             List<Pedido> pedidos = new List<Pedido>();
@@ -243,6 +315,31 @@ namespace NTTShopAdmin.Controllers
                 usuario = null;
             }
             return usuario;
+        }
+        private Producto GetProducto(int? id)
+        {
+            Producto producto = new Producto();
+            string url = generalUrl + "Producto/getProducto?id=" + id;
+            try
+            {
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Method = "GET";
+
+                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+
+                using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+                {
+                    var resultado = streamReader.ReadToEnd();
+                    var json = JObject.Parse(resultado);
+                    producto = json["producto"].ToObject<Producto>();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                producto = null;
+            }
+            return producto;
         }
     }
 }
