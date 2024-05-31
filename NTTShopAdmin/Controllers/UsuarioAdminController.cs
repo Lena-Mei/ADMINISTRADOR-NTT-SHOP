@@ -155,6 +155,36 @@ namespace NTTShopAdmin.Controllers
             }
         }
 
+        [HttpGet]
+        public ViewResult ActCorreo(int idAdmin)
+        {
+            var admin = GetAdmin(idAdmin);
+            return View(admin);
+        }
+
+
+        [HttpPost]
+        public ActionResult ActCorreo(ManagementUser objAdmin)
+        {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            if (ModelState.IsValid)
+            {
+                if (Cambiar(objAdmin.idUsuario, objAdmin.email))
+                {
+                    ViewBag.Correcto = true;
+                }
+                else
+                {
+                    ViewBag.Mensaje = "El corre introducido está registrado. Introduzca otro.";
+                }
+            }
+            return View(objAdmin);
+        }
+
+
         [HttpPost, ValidateAntiForgeryToken]
         public ActionResult Editar(ManagementUser objAdmin)
         {
@@ -207,12 +237,40 @@ namespace NTTShopAdmin.Controllers
                 }
             }
             return View(objAdmin);
-            
-
-           
+          
         }
 
-        private bool ActDatosAdmin(ManagementUser objAdmin, out string error)
+        private bool Cambiar(int idUsuario, string correo)
+        {
+            bool correcto = false;
+            try
+            {
+
+                string url = generalUrl + "GestionUsuario/updateEmail?idUsuario=" + idUsuario + "&correo=" + correo;
+
+                var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+                httpRequest.Method = "PUT";
+                httpRequest.ContentType = "application/json";
+                httpRequest.Accept = "application/json";
+
+                var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+                HttpStatusCode httpStatus = httpResponse.StatusCode;
+
+                if (httpStatus == HttpStatusCode.OK)
+                {
+                    correcto = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                correcto = false;
+            }
+            return correcto;
+        }
+    
+
+    private bool ActDatosAdmin(ManagementUser objAdmin, out string error)
         {
             error = "";
             bool correcto = false;

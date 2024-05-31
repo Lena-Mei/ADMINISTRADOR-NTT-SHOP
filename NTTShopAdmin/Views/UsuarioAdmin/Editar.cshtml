@@ -65,15 +65,18 @@
             </div>
         </div>
 
-        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
+        <div class="col-4 d-grid gap-2 align-self-center" style="margin-top:45px;">
             <input type="submit" value="Guardar Datos" class="btn btn-outline-dark" />
 
         </div>
-        <div class="col-6 d-grid gap-2 align-self-center" style="margin-top:45px;">
-           @Html.ActionLink("Cambiar Contraseña", "CambiarContra", "UsuarioAdmin", new {@idAdmin = Model.idUsuario}, new {@class="btn btn-outline-dark"})
+        <div class="col-4 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            @Html.ActionLink("Cambiar Contraseña", "CambiarContra", "UsuarioAdmin", new { @idAdmin = Model.idUsuario }, new { @class = "btn btn-outline-dark" })
+        </div>
+        <div class="col-4 d-grid gap-2 align-self-center" style="margin-top:45px;">
+            @Html.ActionLink("Actualizar correo", "ActCorreo", "UsuarioAdmin", new { @idAdmin = Model.idUsuario }, new { @class = "btn btn-outline-dark" })
         </div>
         <div class="col-12 d-grid gap-2" style="margin-top:25px;">
-            @Html.ActionLink("Volver a la lista de administradores", "Index", "UsuarioAdmin", null, new {@class="btn btn-secondary"})
+            @Html.ActionLink("Volver a la lista de administradores", "Index", "UsuarioAdmin", null, new { @class = "btn btn-secondary" })
         </div>
         <div class="col-12">
             @if (ViewData["error"] != null)

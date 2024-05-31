@@ -4,6 +4,7 @@
 
     var estados = ViewBag.Estados as List<NTTShopAdmin.Models.Estado>; // Obtener la lista de estados desde ViewBag y convertirla a List<Estado>
     var usuarios = ViewBag.Usuarios as List<NTTShopAdmin.Models.Usuario>;
+    bool sePuede = bool.Parse(TempData["sePuede"].ToString());
 }
 
 <div class="row">
@@ -169,27 +170,32 @@
             </div>
         </div>
     </div>
+    @if (sePuede)
+    {
+        <p class="alert alert-danger">No se puede Confirmar este pedido porque hay algún producto que no tiene suficiente stock. </p>
+    }
     <div style="margin-top:30px;">
         @Html.ActionLink("Volver listado Pedidos", "Index", "Pedido", null, new { @class = "btn btn-outline-secondary" })
     </div>
 
 
-<div class="modal fade" id="modal" tabindex="-1" aria-labelledby="lblmodal" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="lblmodal">Anular Pedido</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p>¿Estás seguro de anular el pedido <strong>Nº @Model.idPedido</strong>?</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                @Html.ActionLink("Anular", "ActEstado", "Pedido", new { idPedido = Model.idPedido, idEstado = 2 }, new { @class = "btn btn-danger" })
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="lblmodal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="lblmodal">Anular Pedido</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>¿Estás seguro de anular el pedido <strong>Nº @Model.idPedido</strong>?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    @Html.ActionLink("Anular", "ActEstado", "Pedido", new { idPedido = Model.idPedido, idEstado = 2 }, new { @class = "btn btn-danger" })
+                </div>
             </div>
         </div>
     </div>
-</div>
+
 </div>
 

@@ -1,15 +1,15 @@
-﻿@model NTTShopAdmin.Models.ManagementUser
+﻿
 @{
-    ViewBag.Title = "CambiarContra";
+    ViewBag.Title = "ActCorreo";
 }
+@model NTTShopAdmin.Models.ManagementUser
 
 
-
-@using (Html.BeginForm("CambiarContra", "UsuarioAdmin", FormMethod.Post))
+@using (Html.BeginForm("ActCorreo", "UsuarioAdmin", FormMethod.Post))
 {
     <div class="row justify-content-center">
         <div class="col-md-4">
-            <h2 class="text-center">Cambiar Contraseña</h2>
+            <h2 class="text-center">Actualizar correo</h2>
             <hr />
             @Html.AntiForgeryToken()
             @Html.ValidationSummary(true)
@@ -25,24 +25,33 @@
                 @Html.ValidationMessageFor(a => a.inicio)
                 @Html.HiddenFor(a => a.inicio)
             </div>
+            @Html.HiddenFor(a => a.idUsuario)
+            @Html.HiddenFor(a => a.apellido2)
+            @Html.HiddenFor(a => a.apellido1)
+            @Html.HiddenFor(a => a.contrasenya)
+            @Html.HiddenFor(a => a.isoIdioma)
+            @Html.HiddenFor(a => a.nombre)
+
+
+
             <div class="form-group">
-                <label class="form-label fw-bold">Contraseña:</label><br />
-                @Html.PasswordFor(a => a.contrasenya, new { @class = "form-control" })
-                @Html.ValidationMessageFor(a => a.contrasenya, "", new { @class = "text-danger" })
+                <label class="form-label fw-bold">Nuevo correo:</label><br />
+                @Html.TextBoxFor(a => a.email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(a => a.email, "", new { @class = "text-danger" })
             </div>
             @if (ViewData["errorMensaje"] != null)
             {
                 <p class="alert alert-danger" style="margin-top:10px;">@ViewData["errorMensaje"]</p>
             }
             <div class="col-12 d-grid" style="margin-top:10px;">
-                <input type="submit" value="Actualizar Contraseña" class="btn btn-outline-secondary" />
+                <input type="submit" value="Actualizar Correo" class="btn btn-outline-secondary" />
             </div>
             <div class="col-12 d-grid" style="margin-top:10px;">
                 @Html.ActionLink("Volver a Editar Administrador", "Editar", "UsuarioAdmin", new { id = Model.idUsuario }, new { @class = "btn btn-outline-secondary" })
             </div>
             @if (ViewBag.Correcto is true)
             {
-                <p class="alert alert-success">Contraseña Actualizada</p>
+                <p class="alert alert-success">Correo Actualizado</p>
             }
             @if (ViewBag.Mensaje != null)
             {
@@ -50,16 +59,6 @@
             }
         </div>
 
-        @Html.HiddenFor(a => a.email)
-        @Html.HiddenFor(a => a.apellido2)
-        @Html.HiddenFor(a => a.apellido1)
-        @Html.HiddenFor(a => a.contrasenya)
-        @Html.HiddenFor(a => a.isoIdioma)
-        @Html.HiddenFor(a => a.nombre)
-        @Html.HiddenFor(a => a.idUsuario)
 
     </div>
-
-  
-
 }

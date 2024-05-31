@@ -4,6 +4,7 @@ using NTTShopAdmin.Models;
 using PagedList;
 using System;
 using System.Collections.Generic;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -65,6 +66,10 @@ namespace NTTShopAdmin.Controllers
         [HttpGet]
         public ViewResult Detalle(int idPedido, int idUsuario)
         {
+            if (TempData["sePuede"] is null)
+            {
+                TempData["sePuede"] = false;
+            }
             Usuario usuario = GetUsuario(idUsuario);
             Pedido pedido = getPedido(idPedido, usuario.IsoIdioma, usuario.idRate);
             Datos();
@@ -74,9 +79,23 @@ namespace NTTShopAdmin.Controllers
         [HttpGet]
         public ActionResult ActEstado(int idPedido, int idEstado, int idUsuario)
         {
-            if(ActualizarEstado(idPedido, idEstado))
+           
+            if (ActualizarEstado(idPedido, idEstado))
             {
-                if (idEstado == 1) RestarStock(idPedido, idUsuario);
+                if (idEstado == 1)
+                {
+
+                    if(!RestarStock(idPedido, idUsuario))
+                    {
+                        TempData["sePuede"] = true;
+                        ActualizarEstado(idPedido, 5);
+                    }
+                    else
+                    {
+                        TempData["sePuede"] = false;
+                    }
+
+                }
                 if (idEstado == 2) SumarStock(idPedido, idUsuario);
 
                 return RedirectToAction("Detalle", "Pedido", new { idPedido = idPedido, idUsuario=idUsuario });
@@ -86,19 +105,30 @@ namespace NTTShopAdmin.Controllers
                 return View("Error");
             }
         }
-
-        private void RestarStock(int idPedido, int idUsuario)
+        private bool RestarStock(int idPedido, int idUsuario)
         {
+            bool sePuede = true;
             Usuario user = GetUsuario(idUsuario);
             Pedido ped = getPedido(idPedido, user.IsoIdioma, user.idRate);
             Producto prod;
             string error;
             foreach (DetallePedido item in ped.detallePedido)
             {
+                var resta =0;
                 prod = item.producto;
-                prod.stock = prod.stock - item.unidades;
-                ActualizarProducto(prod, out error);
+                resta = prod.stock - item.unidades;
+                if (resta < 0)
+                {
+                    sePuede = false;
+                }
+                else if(sePuede)
+                {
+                    prod.stock = resta;
+                    ActualizarProducto(prod, out error);
+                }
             }
+            return sePuede;
+
         }
         private void SumarStock(int idPedido, int idUsuario)
         {

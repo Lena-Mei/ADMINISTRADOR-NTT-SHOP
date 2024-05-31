@@ -12,6 +12,7 @@ namespace NTTShopAdmin.Controllers
     {
         public ActionResult Index()
         {
+           
             return View();
             
         }

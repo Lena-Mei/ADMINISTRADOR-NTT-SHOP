@@ -33,6 +33,10 @@ namespace NTTShopAdmin.Controllers
         // GET: Producto
         public ViewResult Index(int? pageSize, int? page, string strBusqueda)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return View("~/Views/Login/Login.cshtml");
+            }
 
             List<Producto> listadoProductos = GetAllProducto();
 
@@ -60,6 +64,10 @@ namespace NTTShopAdmin.Controllers
         [HttpGet]
         public ViewResult Crear()
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return View("~/Views/Login/Login.cshtml");
+            }
             DropDown();
 
             return View();
@@ -94,6 +102,10 @@ namespace NTTShopAdmin.Controllers
         [HttpGet]
         public ViewResult Editar(int? id)
         {
+            if (Session["IdUser"] == null && Session["LoginUser"] == null)
+            {
+                return View("~/Views/Login/Login.cshtml");
+            }
             var edit = GetProducto(id);
             DropDown();
             var viewModel = new Editar
